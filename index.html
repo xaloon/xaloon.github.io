@@ -1,74 +1,179 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<head>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="xaloon java ee components : " />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>xaloon java ee components</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/xaloon">View on GitHub</a>
-
-          <h1 id="project_title">xaloon java ee components</h1>
-          <h2 id="project_tagline"></h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
+	<!-- BASIC NEEDS
+    ================================================== -->
+	<meta charset="utf-8" />
+	<title>xaloon | Apache Wicket Components</title>
+	<meta name="description" content="Integration platform and Apache Wicket components for easier Java EE development"/>
+	<meta name="author" content=""/>
     
+	<!-- MOBILE META
+    ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements
+    ================================================== -->
+    <!--[if lt IE 9]> 
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+    <!-- CSS
+    ================================================== -->
+	<link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet"/>
+    <link href="css/font-awesome.css" rel="stylesheet"/>
+    <link href="css/prettyPhoto.css" rel="stylesheet"/>
+    <link href="css/custom-style.css" rel="stylesheet"/>
+	
+    <!-- GOOGLE FONT
+    ================================================== -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700" />
+    <link rel='stylesheet' id='mission-font-css'  href='http://fonts.googleapis.com/css?family=Oswald&#038;ver=3.3.2' type='text/css' media='all' />
+    
+	<!-- FABICON
+	================================================== -->
+	<link rel="shortcut icon" href=""/>
 
-  </body>
+</head>
+<body>
+
+    <header id="header" class="navbar-fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="span4">
+                    <div  class="logo">
+                    	<h3><a href="index.html">xaloon.org</a> <small>Business Components for Java EE</small></h3>
+                    </div>
+                </div>
+                <div class="span8">
+                    <div class="menu">
+                        <ul class="main-menu">
+			    	        <li><a href="index.html">Home</a></li>
+	        		    	
+		    	        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header> 
+    <div id="main">
+        <div class="container fill">
+        	<div class="row">
+                <section id="page-title" class="message-container span12">
+                    <h1>We are glad to see you !</h1>
+                    <h3>xaloon business components - we help to grow your business</h3>
+                    <hr>
+                </section>
+                
+                <section  class="span12 feature-block">
+                    <div class="row">
+                        <div class="span3">
+                            <div class="experience-icon">
+                                <i class="icon-wrench green"></i>
+                            </div>
+                            <h4 class="section-title green">Modularity by nature</h4>
+                        	<div class="widget categories">
+		                        <p>
+		                        You can easily implement your software using xaloon plugin api and integrate into <span class="label label-info">xaloon platform.</span> 
+		                        
+		                        Each plugin may have it's own improved administration panel where you can modify plugin properties. Administration panel may have it's own design or use default one. Module's links are automatically discovered by <span class="label label-info">xaloon platform</span>  and inserted into existing menu tree.</p>
+		                    </div>    
+                        </div>
+                        
+                        <div class="span3">
+                            <div class="experience-icon">
+                                <i class="icon-leaf green"></i>
+                            </div>
+                            <h4 class="section-title green">Platform for easier web application development</h4>
+                            <p>You should focus on development, not in creating an infrastructure. <span class="label label-info">xaloon platform</span> is based on <span class="label label-important">Java EE 6 profile</span>, and provides integration with <b>Apache Wicket</b>, <b>Jboss Infinispan</b>, <b>Apache Shiro</b> and other external components. It also provides some already made components, such as security facade, default user and role management, simple message communication and others. Full list of components is available in <a href="components.html">components section</a>.</p>
+                        </div>
+                        <div class="span3">
+                            <div class="experience-icon">
+                                <i class="icon-lock green"></i>
+                            </div>
+                            <h4 class="section-title green">Security by default</h4>
+                            <p>Your application should be safe, so we added security support at the beginning. Just annotate your pages with Java EE 6 security annotations and link management will be secured by <span class="label label-info">xaloon platform.</span> We added external authentication support by default, so you can have <b>twitter</b>, <b>facebook</b>, <b>google</b> or <b>linkedin</b> authentication.</p>
+                        </div>
+                        <div class="span3">
+                            <div class="experience-icon">
+                                <i class="icon-heart-empty green"></i>
+                            </div>
+                            <h4 class="section-title green">Ready made components</h4>
+                            <p>We are always trying to add new components to serve your needs. 
+                            Currently we have <b>external authentication</b>,<b>commenting</b>, <b>user and role management</b>, <b>blog</b> and <b>photo gallery</b> components. 
+                            We are also having ambitions to add an integration with activiti and add add task and process management for your needs.</p>
+                        </div>
+                    </div>
+                </section>
+                
+             
+                
+            </div>
+            
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span3">
+                    <div class="widget">
+                        <h3 class="widget-title">About</h3> 
+                        <p>I am Java developer, interested in wicket component development. 
+                        I am working as Java IT consultant and my full time job covers architecture design, system analysis, java development of complex parts, 
+                        combining source with continuous integration and code quality tools, domain modeling (JPA) and other Java related stuff. 
+                        Working on open source projects improves my skills and knowledge of different frameworks, which might be useful in the future.</p>
+                    </div>
+                </div>
+                <div class="span3">                  
+                    <div class="widget recent-tweets">
+                        <h3 class="widget-title">Latest Tweets</h3>
+                        <p>No twitter messages</p>
+                    </div>
+                </div>
+                
+                <div class="span3">
+                    <div class="widget categories">
+                        <h3 class="widget-title">Overview</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="copyrights">
+        <div class="container">
+            <div class="row">
+                <div class="terms-condition span7">
+                    <ul class="copyright">
+                        <li>© 2012 xaloon.org. All rights reserved</li>
+                    </ul>
+                </div>
+                <div class="span5">
+                    <ul class="social-links pull-right">
+                        <li><a href="https://github.com/turisto/xaloon" rel="tooltip" data-placement="top" data-original-title="GitHub"><i class="icon-github"></i></a></li>
+                        <li><a href="http://www.linkedin.com/in/vytautasr" rel="tooltip" data-placement="top" data-original-title="LinkedIn"><i class="icon-linkedin"></i></a></li>
+                        <li><a href="blogs/rss" rel="tooltip" data-placement="top" data-original-title="RSS"><i class="icon-rss"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPTS
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>  
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="js/custom-script.js"></script>
+
+</body>
 </html>
